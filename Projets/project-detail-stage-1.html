@@ -115,6 +115,47 @@
         </div>
     </section>
 
+    <button id="scrollToTopBtn"
+        class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg transition duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5"></path>
+            <path d="m5 12 7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+
+        // Fonction de défilement doux vers le haut
+        const scrollToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+
+        // Écouteur d'événement pour le clic
+        scrollBtn.addEventListener('click', scrollToTop);
+
+        // Affiche/masque le bouton basé sur la position de défilement
+        const toggleScrollButton = () => {
+            // Afficher le bouton si le défilement dépasse 20px
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        // Événement de défilement
+        window.onscroll = toggleScrollButton;
+
+        // Cacher le bouton au chargement initial
+        // Note: Vous pouvez commenter cette ligne si vous souhaitez que le bouton soit visible dès le début, même en haut de page.
+        toggleScrollButton(); 
+    </script>
+
     <script src="script.js"></script>
 </body>
 </html>

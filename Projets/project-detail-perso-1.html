@@ -1,137 +1,142 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site E-commerce Moderne - Mon Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto'Lution – Site Vitrine - Mon Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Portfolio</a>
-            
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">À Propos</a></li>
-                <li><a href="projects.html" class="nav-link active">Projets</a></li>
-                <li><a href="skills.html" class="nav-link">Compétences</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Project Detail Header -->
-    <section class="page-header">
-        <div class="container">
-            <a href="projects.html" class="back-link">← Retour aux projets</a>
-            <h1 class="page-title">Site E-commerce Moderne</h1>
-            <p class="page-description">Projet Personnel</p>
-        </div>
-    </section>
+<body class="bg-black text-white px-10 md:px-32 py-16 font-sans">
 
-    <!-- Project Detail Content -->
-    <section class="project-detail-section">
-        <div class="container">
-            <div class="project-detail-content">
-                <!-- Project Overview -->
-                <div class="detail-section">
-                    <h2>Aperçu du Projet</h2>
-                    <p>
-                        Ce projet est une plateforme e-commerce complète développée avec les technologies modernes. 
-                        Elle permet aux utilisateurs de parcourir des produits, de les ajouter au panier, et de finaliser 
-                        leurs achats de manière sécurisée.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">Stripe</span>
-                    </div>
-                </div>
+    <a href="../projects.html" style="display:inline-block; padding:20px; color:white;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"></path>
+            <path d="M19 12H5"></path>
+        </svg>
+    </a>
+    
+    <section class="max-w-3xl mx-auto py-16 px-4">
 
-                <!-- Project Image 1 -->
-                <div class="detail-section">
-                    <h2>Interface Principale</h2>
-                    <div class="project-detail-image">
-                        <img src="/placeholder.svg?height=500&width=800" alt="Interface principale">
-                    </div>
-                </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Auto'Lution – Site Vitrine</h1>
 
-                <!-- Project Description -->
-                <div class="detail-section">
-                    <h2>Description Détaillée</h2>
-                    <p>
-                        L'application offre une expérience utilisateur fluide avec une interface moderne et intuitive. 
-                        Les principales fonctionnalités incluent :
-                    </p>
-                    <ul class="feature-list">
-                        <li>Catalogue de produits avec filtres et recherche avancée</li>
-                        <li>Système de panier dynamique avec calcul en temps réel</li>
-                        <li>Intégration de paiement sécurisé via Stripe</li>
-                        <li>Gestion des commandes et historique d'achats</li>
-                        <li>Interface d'administration pour la gestion des produits</li>
-                        <li>Système d'authentification et de profils utilisateurs</li>
-                    </ul>
-                </div>
+        <p class="text-lg text-gray-400 mb-8">
+            Création d’un site vitrine pour l'entreprise Auto'Lution, regroupant son histoire, ses prestation, ses
+            tarifs,
+            et son contact.
+        </p>
 
-                <!-- Project Image 2 -->
-                <div class="detail-section">
-                    <h2>Processus de Paiement</h2>
-                    <div class="project-detail-image">
-                        <img src="/placeholder.svg?height=500&width=800" alt="Processus de paiement">
-                    </div>
-                </div>
+        <p class="text-lg leading-relaxed text-gray-200 mb-8 text-justify">
+            Ce projet personnel vise à concevoir un site vitrine complet pour Auto'lution. Ce site a pour objectif de
+            renforcer la visibilité d’Auto'lution, d’attirer davantage de clients et de viser un nouveau type de
+            clientèle.
+            C’est mon tout premier projet, donc il n’est pas encore parfait et reste en phase de conception.
+        </p>
 
-                <!-- Technologies Used -->
-                <div class="detail-section">
-                    <h2>Technologies Utilisées</h2>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <strong>Frontend:</strong> React, Redux, Tailwind CSS
-                        </div>
-                        <div class="tech-item">
-                            <strong>Backend:</strong> Node.js, Express
-                        </div>
-                        <div class="tech-item">
-                            <strong>Base de données:</strong> MongoDB
-                        </div>
-                        <div class="tech-item">
-                            <strong>Paiement:</strong> Stripe API
-                        </div>
-                    </div>
-                </div>
+        <hr class="border-gray-700 my-10" />
 
-                <!-- Project Links -->
-                <div class="detail-section">
-                    <h2>Liens du Projet</h2>
-                    <div class="project-detail-links">
-                        <a href="#" class="btn btn-primary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            Voir le Code
-                        </a>
-                        <a href="#" class="btn btn-secondary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Voir la Démo
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <h2 class="text-2xl font-semibold mb-4">Objectifs du site</h2>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 mb-10">
+            <li>Créer un site pour agrandir sa visibilité</li>
+            <li>Rediriger les clients vers differentes messageries (mail, whatsapp, tiktok).</li>
+            <li>Mettre en valeur l’image de l'entreprise en les renvoyant vers des pages instagram ou tiktok</li>
+            <li>Faire passer l'entreprise dans un univers plus professionnelle</li>
+            <li>Utiliser Bootstrap pour des performances optimales et un bon SEO.</li>
+        </ul>
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-4">Section prévue du site</h2>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 mb-10">
+            <li>Charte éthique : Paragraphe parlant des valeurs de l'entreprise</li>
+            <li>Histoire : Section parlant de l'entreprise </li>
+            <li>Prestation : Card montrant les prestations disponibles ainsi que leurs tarifs</li>
+            <li>Contact : Redirection vers divers systeme de messagerie </li>
+        </ul>
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-4"> Technologie utilisées</h2>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 mb-10">
+            <li>Framework : Bootstrap</li>
+            <li>Language : HTML</li>
+            <li>Style : CSS</li>
+            <li>Deploiment : Infomaniak</li>
+        </ul>
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-4">Conclusion du projet</h2>
+        <p class="text-lg leading-relaxed text-gray-200 mb-8 text-justify">
+            Ce projet personnel marque la toute première fois que je conçois un site vitrine, ici pour Auto'lution. Il
+            n’est pas encore parfait et reste en phase de conception, car il s'agit de mon tout premier projet. Il n’est
+            pas très poussé techniquement, mais il me tient particulièrement à cœur. Il a pour objectif de renforcer la
+            visibilité d’Auto'lution, d’attirer davantage de clients et de viser une nouvelle clientèle. Malgré ses
+            imperfections, ce projet représente une étape importante dans mon apprentissage.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-8">
+            <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                Voir le Code
+            </a>
+            <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg border border-gray-600 hover:bg-gray-800 transition duration-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Voir la Démo
+            </a>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <button id="scrollToTopBtn"
+        class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg transition duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5"></path>
+            <path d="m5 12 7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+
+        // Fonction de défilement doux vers le haut
+        const scrollToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+
+        // Écouteur d'événement pour le clic
+        scrollBtn.addEventListener('click', scrollToTop);
+
+        // Affiche/masque le bouton basé sur la position de défilement
+        const toggleScrollButton = () => {
+            // Afficher le bouton si le défilement dépasse 20px
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        // Événement de défilement
+        window.onscroll = toggleScrollButton;
+
+        // Cacher le bouton au chargement initial
+        // Note: Vous pouvez commenter cette ligne si vous souhaitez que le bouton soit visible dès le début, même en haut de page.
+        toggleScrollButton(); 
+    </script>
 </body>
 </html>

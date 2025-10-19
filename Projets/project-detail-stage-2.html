@@ -1,120 +1,252 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Système CRM Entreprise - Mon Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gigathink - Projet de Stage - Mon Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Portfolio</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">À Propos</a></li>
-                <li><a href="projects.html" class="nav-link active">Projets</a></li>
-                <li><a href="skills.html" class="nav-link">Compétences</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <section class="page-header">
-        <div class="container">
-            <a href="projects.html" class="back-link">← Retour aux projets</a>
-            <h1 class="page-title">Système CRM Entreprise</h1>
-            <p class="page-description">Projet de Stage</p>
-        </div>
-    </section>
+<body class="bg-black text-white px-10 md:px-32 py-16 font-sans">
 
-    <section class="project-detail-section">
-        <div class="container">
-            <div class="project-detail-content">
-                <div class="detail-section">
-                    <h2>Aperçu du Projet</h2>
-                    <p>
-                        Solution CRM complète pour la gestion des clients, des ventes et du support client.
-                        Système développé durant mon stage pour optimiser les processus commerciaux de l'entreprise.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Angular</span>
-                        <span class="tag">Spring Boot</span>
-                        <span class="tag">Oracle</span>
-                    </div>
-                </div>
+    <a href="../projects.html" style="display:inline-block; padding:20px; color:white;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"></path>
+            <path d="M19 12H5"></path>
+        </svg>
+    </a>
 
-                <div class="detail-section">
-                    <h2>Interface CRM</h2>
-                    <div class="project-detail-image">
-                        <img src="/placeholder.svg?height=500&width=800" alt="Interface CRM">
-                    </div>
-                </div>
+    <section class="max-w-3xl mx-auto py-16 px-4">
 
-                <div class="detail-section">
-                    <h2>Fonctionnalités</h2>
-                    <ul class="feature-list">
-                        <li>Gestion complète des contacts et clients</li>
-                        <li>Pipeline de ventes avec suivi des opportunités</li>
-                        <li>Système de tickets pour le support client</li>
-                        <li>Automatisation des tâches et workflows</li>
-                        <li>Rapports et analyses des performances</li>
-                        <li>Intégration email et calendrier</li>
-                    </ul>
-                </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Gigathink</h1>
 
-                <div class="detail-section">
-                    <h2>Pipeline de Ventes</h2>
-                    <div class="project-detail-image">
-                        <img src="/placeholder.svg?height=500&width=800" alt="Pipeline ventes">
-                    </div>
-                </div>
+        <p class="text-lg text-gray-400 mb-8">
+            Stage de 1 mois - Développeur Full-Stack
+        </p>
 
-                <div class="detail-section">
-                    <h2>Technologies Utilisées</h2>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <strong>Frontend:</strong> Angular 16
-                        </div>
-                        <div class="tech-item">
-                            <strong>Backend:</strong> Spring Boot
-                        </div>
-                        <div class="tech-item">
-                            <strong>Base de données:</strong> Oracle Database
-                        </div>
-                        <div class="tech-item">
-                            <strong>Security:</strong> Spring Security, JWT
-                        </div>
-                    </div>
-                </div>
+        <hr class="border-gray-700 my-10" />
 
-                <div class="detail-section">
-                    <h2>Liens du Projet</h2>
-                    <div class="project-detail-links">
-                        <a href="#" class="btn btn-primary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            Voir le Code
-                        </a>
-                        <a href="#" class="btn btn-secondary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Voir la Démo
-                        </a>
-                    </div>
+        <h2 class="text-2xl font-semibold mb-4">Présentation de l'Entreprise</h2>
+        <p class="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+            Gigathink SNC est une société en nom collectif suisse fondée en octobre 2020, spécialisée dans les services
+            informatiques. Elle propose le développement de sites web et d’applications mobiles, ainsi que des
+            prestations de maintenance techniques. Basée à Vernier (Genève), l’entreprise est conduite par trois
+            associés — Adamo Cannone, Florian Burgener et Jules Bursik — tous détenteurs des pouvoirs de signature.
+            Gigathink vise à accompagner ses clients de la conception à l’optimisation de leurs solutions numériques,
+            dans un environnement technologique évolutif.
+            <br><br>
+            Elle développe également différents produits numériques, dont GNews, une API performante permettant de
+            collecter, filtrer et diffuser des actualités en temps réel à partir de multiples sources. Conçue pour les
+            développeurs et les entreprises, cette API facilite l’intégration rapide de flux d’informations fiables dans
+            des applications, sites web ou systèmes internes.
+        </p>
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-4">Refonte du Site</h2>
+        <p class="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+            J’ai réalisé la refonte complète du site de Gigathink SNC, une société suisse spécialisée dans les services
+            informatiques, afin d’optimiser son référencement naturel (SEO) et de renforcer son image de marque. Ce
+            projet a inclus la conception de maquettes ergonomiques sur Figma pour améliorer l’expérience utilisateur,
+            ainsi que la mise en place et la gestion du développement via GitLab. L’objectif était d’offrir à Gigathink
+            une plateforme plus moderne, intuitive et performante, capable de refléter son expertise dans un
+            environnement technologique en constante évolution.
+        </p>
+
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-4">Pages Refaites</h2>
+        <ul class="text-lg list-disc list-inside text-gray-300 space-y-2 mb-10">
+            <li>Pricing</li>
+            <li>Integration</li>
+            <li>Contact</li>
+            <li>Login</li>
+            <li>Sign up</li>
+            <li>FAQ</li>
+            <li>Information</li>
+            <li>Question</li>
+            <li>Partenaire</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mb-4">Aperçus du Site</h2>
+        <div class="max-w-xl mx-auto relative">
+            <div id="carousel" class="overflow-hidden rounded-lg shadow-lg">
+                <div class="flex transition-transform duration-500" style="transform: translateX(0%)"
+                    id="carousel-inner">
+                    <img src="../Img/pricing.png" alt="Page Pricing" class="w-full flex-shrink-0">
+                    <img src="../Img/integration.png" alt="Page Intégration" class="w-full flex-shrink-0">
+                    <img src="../Img/contact.png" alt="Page Contact" class="w-full flex-shrink-0">
+                    <img src="../Img/login.png" alt="Page Login" class="w-full flex-shrink-0">
+                    <img src="../Img/signup.png" alt="Page Sign up" class="w-full flex-shrink-0">
+                    <img src="../Img/faq.png" alt="Page FAQ" class="w-full flex-shrink-0">
+                    <img src="../Img/information.png" alt="Page Information" class="w-full flex-shrink-0">
+                    <img src="../Img/question.png" alt="Page Question" class="w-full flex-shrink-0">
+                    <img src="../Img/client.png" alt="Page Partenaire" class="w-full flex-shrink-0">
                 </div>
             </div>
+
+            <button id="prevBtn" aria-label="Précédent"
+                class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 bg-opacity-30 hover:bg-opacity-60 rounded-md w-10 h-10 flex items-center justify-center">
+                <svg width="10" height="18" viewBox="0 0 10 18" class="w-3 h-3" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.99993 1C8.99993 1 1 6.89187 1 9C1 11.1083 9 17 9 17" stroke="#FFFFFF" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <button id="nextBtn" aria-label="Suivant"
+                class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 bg-opacity-30 hover:bg-opacity-60 rounded-md w-10 h-10 flex items-center justify-center">
+                <svg width="10" height="18" viewBox="0 0 10 18" class="w-3 h-3 transform rotate-180" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.99993 1C8.99993 1 1 6.89187 1 9C1 11.1083 9 17 9 17" stroke="#FFFFFF" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+        </div>
+
+        <script>
+            const carouselInner = document.getElementById('carousel-inner');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const totalImages = carouselInner ? carouselInner.children.length : 0;
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                if (carouselInner) {
+                    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+                    updateCarousel();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+                    updateCarousel();
+                });
+            }
+        </script>
+
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-4">Traduction du Site</h2>
+        <p class="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+            Dans le cadre de la refonte du site, j’ai également procédé à la saisie et à l’organisation de l’ensemble
+            des
+            contenus textuels. Chaque mot et expression importants ont été identifiés puis enregistrés comme mots-clés
+            stratégiques, afin d’optimiser la visibilité et la cohérence du site. J’ai ensuite intégré leurs traductions
+            en
+            anglais et en espagnol, stockées et structurées dans des fichiers JSON, ce qui facilite la gestion
+            multilingue
+            et permet de mettre à jour les contenus de manière rapide et centralisée.
+        </p>
+
+        <div class="mb-8 mt-8">
+            <img src="../Img/trad1.png" alt="Fichier JSON de traduction" class="w-full rounded-lg shadow-lg">
+        </div>
+
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-4">Comparaison Concurrence</h2>
+        <p class="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+            Dans ce projet, j’ai réalisé une étude comparative approfondie de quatre API concurrentes afin d’identifier
+            leurs forces et faiblesses. J’ai compilé les résultats sous forme de tableau Excel pour visualiser
+            clairement les différences. Ensuite, j’ai intégré cette analyse directement sur le site, offrant ainsi une
+            présentation claire et structurée des options disponibles pour les utilisateurs. Ce travail m’a permis de
+            développer à la fois mes compétences en recherche, en organisation de données et en intégration web.
+        </p>
+
+        <div class="mb-8 mt-8">
+            <img src="../Img/concurents.png" alt="Tableau de comparaison des concurrents"
+                class="w-full rounded-lg shadow-lg">
+        </div>
+
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-4">Conclusion du Stage</h2>
+        <p class="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+            Ce stage m’a permis de gagner en autonomie tout en découvrant de nouveaux outils essentiels tels que Figma
+            pour la conception graphique et Git pour la gestion collaborative du code. Travailler en équipe m’a
+            également beaucoup appris sur la coordination et la communication dans un environnement professionnel. Cette
+            expérience a été très bénéfique pour mon développement personnel et technique.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-8">
+            <a href="https://github.com/pacobrnt/crm-angular-springboot" target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    Voir le Code
+            </a>
+            <a href="#" target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg border border-gray-600 hover:bg-gray-800 transition duration-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Voir la Démo
+            </a>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <button id="scrollToTopBtn"
+        class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg transition duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5"></path>
+            <path d="m5 12 7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+
+        // Fonction de défilement doux vers le haut
+        const scrollToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+
+        // Écouteur d'événement pour le clic
+        scrollBtn.addEventListener('click', scrollToTop);
+
+        // Affiche/masque le bouton basé sur la position de défilement
+        const toggleScrollButton = () => {
+            // Afficher le bouton si le défilement dépasse 20px
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        // Événement de défilement
+        window.onscroll = toggleScrollButton;
+
+        // Cacher le bouton au chargement initial
+        // Note: Vous pouvez commenter cette ligne si vous souhaitez que le bouton soit visible dès le début, même en haut de page.
+        toggleScrollButton(); 
+    </script>
 </body>
+
 </html>

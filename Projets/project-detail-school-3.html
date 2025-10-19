@@ -1,120 +1,295 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plateforme de Blog - Mon Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Portfolio</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">À Propos</a></li>
-                <li><a href="projects.html" class="nav-link active">Projets</a></li>
-                <li><a href="skills.html" class="nav-link">Compétences</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <section class="page-header">
-        <div class="container">
-            <a href="projects.html" class="back-link">← Retour aux projets</a>
-            <h1 class="page-title">Plateforme de Blog</h1>
-            <p class="page-description">Projet Scolaire</p>
+<body class="bg-black text-white px-10 md:px-32 py-16 font-sans">
+
+    <a href="../projects.html" style="display:inline-block; padding:20px; color:white;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"></path>
+            <path d="M19 12H5"></path>
+        </svg>
+    </a>
+    <section class="max-w-3xl mx-auto py-16 px-4">
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Forum cybersécurité</h1>
+
+        <p class="text-lg text-gray-400 mb-8">
+            Intervenant au lycée Gabriel Fauré ainsi qu'au collège de Groisy
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+            Le Forum Cybersécurité du lycée Gabriel Fauré, lancé en 2024 par les enseignants du BTS SIO, vise à
+            sensibiliser élèves et personnels aux menaces numériques à travers des ateliers interactifs. J’y ai
+            participé en 2025 en tant qu’intervenant sur un atelier consacré aux dangers des PDF piégés. L’édition 2025
+            a rassemblé plus de 700 participants et mobilisé plus de 50 étudiants et enseignants.
+        </p>
+
+        <hr class="border-gray-700 my-10" />
+
+
+        <h2 class="text-2xl font-semibold mb-4">Objectifs de l'atelier</h2>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 mb-10">
+            <li>Sensibiliser aux fichiers courants pouvant contenir des menaces</li>
+            <li>Développer une vigilance face aux pièces jointes</li>
+            <li>Expliquer les techniques d’exploitation via PDF</li>
+            <li>Apprendre à analyser un fichier suspect</li>
+            <li>Montrer les conséquences concrètes d’une attaque</li>
+            <li>Adopter les bons réflexes de sécurité numérique</li>
+            <li>Contribuer à une culture numérique responsable</li>
+            <li>Encourager l’intérêt pour l’analyse de fichiers et la cybersécurité</li>
+        </ul>
+
+        <hr class="border-gray-700 my-10" />
+
+
+        <h2 class="text-2xl font-semibold mb-4">Détail de l'atelier de l'atelier</h2>
+        <p class="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+            L’atelier portait sur les virus transmis par PDF. Pour réaliser cela, nous disposions de deux configurations
+            : celle du groupe Yanis, Louai et Paco nommée “Virus”, et celle des participants nommée “Utilisateurs”.
+            <br><br>
+            Sur le PC “Virus”, à l’aide de commandes trouvées grâce à un TP destiné aux deuxièmes années fourni par M.
+            Naville, nous avons infecté un fichier PDF de notre choix.
+            <br><br>
+            Le groupe “Utilisateurs” était mis devant un site proposant trois formations pour devenir riche grâce au
+            e-commerce (e-books) sous forme de PDF. Une fois le virus installé sur la machine “Utilisateur”, nous leur
+            présentions les différentes fonctionnalités accessibles avec le virus (Keylogger, Webcam, diffusion de leur
+            écran).
+            <br><br>
+            Leur objectif était d’identifier quelle formation était infectée. Nous avons ensuite échangé avec eux sur
+            les méthodes pour éviter les virus et se protéger : mettre à jour ses logiciels pour bénéficier des derniers
+            antivirus, faire preuve de prudence avec les mails, et rester vigilant sur les sites visités.
+        </p>
+
+        <hr class="border-gray-700 my-10" />
+
+
+        <h2 class="text-2xl font-semibold mb-4">Matériels utilisés lors de l’Atelier</h2>
+        <div class="overflow-x-auto mt-6 mb-10">
+            <table class="min-w-full table-auto border border-gray-700 text-gray-300">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 border border-gray-700">Équipement</th>
+                        <th class="px-4 py-2 border border-gray-700">PC Virus (Yanis)</th>
+                        <th class="px-4 py-2 border border-gray-700">PC Utilisateurs (Collégiens, Lycéens)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="px-4 py-2 border border-gray-700 font-semibold">Ordinateur</td>
+                        <td class="px-4 py-2 border border-gray-700">1 PC avec l’OS Kali Linux</td>
+                        <td class="px-4 py-2 border border-gray-700">1 PC avec l’OS Windows 10 (sans antivirus)</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2 border border-gray-700 font-semibold">Périphériques</td>
+                        <td class="px-4 py-2 border border-gray-700">Clavier, souris, écran, vidéoprojecteur (2ᵉ écran)
+                        </td>
+                        <td class="px-4 py-2 border border-gray-700">Clavier, souris, écran, webcam</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2 border border-gray-700 font-semibold">Autres</td>
+                        <td class="px-4 py-2 border border-gray-700" colspan="2">Tables, chaises, multiprises, câbles
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-6">Schéma de l'atelier</h2>
+        <div class="flex flex-wrap gap-6 mb-10">
+            <img src="../Img/atelier1.png" alt="Schéma 1" class="w-96 h-96 object-cover border border-gray-700" />
+            <img src="../Img/atelier2.png" alt="Schéma 2" class="w-96 h-96 object-cover border border-gray-700" />
+        </div>
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-6 text-justify">Configuration du virus avec Kali Linux</h2>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            Tout d'abord, sur la machine avec l’OS Kali Linux nous avons lancé la console de Metasploit en utilisant la
+            commande <code class="bg-gray-800 px-1 rounded">msfconsole</code>.
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            Ensuite, nous avons recherché un exploit spécifique ciblant les fichiers PDF Adobe sur les systèmes Windows
+            en utilisant la commande <code
+                class="bg-gray-800 px-1 rounded">search type:exploit platform:windows adobe pdf</code>.
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            Après avoir sélectionné l'exploit à utiliser pour notre attaque via fichier PDF, nous avons exécuté la
+            commande suivante dans Metasploit : <code
+                class="bg-gray-800 px-1 rounded">exploit/windows/fileformat/adobe_pdf_embedded_exe</code>. Cette
+            commande permet de générer un fichier PDF malveillant qui intègre un exécutable.
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            Ensuite, le fichier PDF généré a été déplacé sur notre site Web d’ebooks piégés, accessible par les
+            participants de l’atelier.
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            Une fois le virus créé et intégré au site, nous avons configuré le payload pour établir une connexion
+            inversée via Meterpreter, en utilisant le module <code class="bg-gray-800 px-1 rounded">multi/handler</code>
+            : ces paramètres définissent l’adresse IP de l’attaquant (<code
+                class="bg-gray-800 px-1 rounded">LHOST</code>) et le port utilisé pour écouter la connexion entrante
+            depuis la cible (<code class="bg-gray-800 px-1 rounded">LPORT</code>).
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            Après cette configuration, nous avons lancé l’écoute avec la commande. Le terminal indique alors que
+            Metasploit est en attente de la connexion depuis la cible. Une fois que la victime ouvre le fichier PDF
+            piégé, la session Meterpreter est automatiquement établie, comme visible dans la capture.
+        </p>
+
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-6">Scénario de l’atelier Virus</h2>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            L'atelier visait à montrer comment un fichier PDF infecté peut être utilisé pour une attaque.
+            Pour cela, nous avons utilisé un ordinateur tournant sous Kali Linux, avec l'adresse IP <code
+                class="bg-gray-800 px-1 rounded">192.168.10.200</code>.
+            Notre objectif principal était de créer un fichier PDF intentionnellement infecté, exploitant une faille
+            spécifique dans la version d'Adobe Reader 8.1.1, ce qui permettrait de faire fonctionner un logiciel
+            malveillant à distance.
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            Voici le lien de téléchargement de la version d’Adobe 8.1.1 possédant une faille de sécurité :
+            <a href="http://www.oldversion.com/windows/acrobat-reader-8-1-1" target="_blank"
+                class="text-blue-400 underline">
+                http://www.oldversion.com/windows/acrobat-reader-8-1-1
+            </a>
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-6 text-justify">
+            Trois fichiers PDF ont été créés, dont un seul a été intentionnellement infecté.
+            Les participants ont été invités à télécharger ces fichiers sur leurs machines Windows en accédant
+            directement à la page “Nos Ebooks” depuis le site codé en HTML.
+        </p>
+
+        <div class="flex justify-center">
+            <img src="../Img/ebook.png" alt="Illustration scénario atelier virus"
+                class="w-128 h-128 object-cover border border-gray-700" />
+        </div>
+
+        <p class="text-lg leading-relaxed text-gray-300 mt-6 mb-6 text-justify">
+            Les participants ont été invités à télécharger les 3 ebooks tout en ne sachant pas lequel des 3 est infecté.
+            Une fois les 3 ebooks téléchargés,
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-6 text-justify">
+            Ils ont été invités à sélectionner les 3 ebooks en même temps pour les ouvrir simultanément. Une fois les 3
+            fichiers PDF ouverts avec la version 8.1.1 d’Adobe Reader, plusieurs messages apparaissent successivement
+            pour confirmer l’ouverture du fichier infecté. Il faut notamment enregistrer le fichier en remplaçant
+            l’existant, puis cliquer sur "Open" pour lancer le virus. Ces étapes ne font que valider l’exécution du
+            malware. Lorsqu’<code class="bg-gray-800 px-1 rounded">ebook1.pdf</code> infecté est ouvert, notre machine
+            Kali reçoit un message de
+            Meterpreter, indiquant que la machine cible est compromise et qu’un accès distant est établi. Ce message
+            affiche notamment l’adresse IP de l’attaquant et de la cible, ainsi que la date et l’heure du déclenchement.
+            Meterpreter, outil du framework Metasploit, permet à l’attaquant de contrôler à distance le système
+            compromis, d’exécuter des commandes, d’extraire des données et d’explorer le réseau.
+        </p>
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-6">Moyens de prévention</h2>
+        <p class="text-lg leading-relaxed text-gray-300 mb-6 text-justify">
+            Pour éviter ce type de problème, on peut utiliser des logiciels comme Windows Defender, le programme
+            antivirus gratuit de Windows.
+            Mais, pour la démonstration, on avait désactivé Windows Defender. Si on l'avait laissé activé, le PDF
+            infecté aurait été bloqué dès son ouverture.
+            Pour éviter une attaque via un PDF piégé, il est essentiel d’adopter plusieurs bonnes pratiques de
+            sécurité. Il faut tout d’abord éviter d’ouvrir des fichiers PDF provenant de sources inconnues ou
+            douteuses, notamment par mail ou via des sites non sécurisés.
+            L’utilisation d’un lecteur PDF sécurisé, comme Sumatra PDF, ou l’ouverture des fichiers dans un
+            environnement isolé (machine virtuelle, sandbox) permet de limiter les risques.
+            Il est également recommandé de désactiver JavaScript dans les lecteurs PDF et de scanner les fichiers
+            avec un antivirus à jour avant de les ouvrir.
+            Des outils d’analyse comme VirusTotal ou PDF Examiner peuvent aussi être utilisés pour détecter
+            d’éventuels scripts malveillants.
+            Enfin, il convient de désactiver les fonctions d’ouverture automatique des pièces jointes et de
+            restreindre l’exécution de macros ou d’actions automatiques dans les lecteurs PDF.
+        </p>
+
+
+        <div class="flex flex-wrap gap-4 mt-8">
+            <a href="https://github.com/pacobrnt/cybersafety-workshop" target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                Voir le Code
+            </a>
+            <a href="#" target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg border border-gray-600 hover:bg-gray-800 transition duration-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Voir la Démo
+            </a>
         </div>
     </section>
 
-    <section class="project-detail-section">
-        <div class="container">
-            <div class="project-detail-content">
-                <div class="detail-section">
-                    <h2>Aperçu du Projet</h2>
-                    <p>
-                        CMS complet avec éditeur Markdown, gestion des médias et système de commentaires.
-                        Plateforme de blogging moderne avec interface d'administration complète.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">Prisma</span>
-                        <span class="tag">MySQL</span>
-                    </div>
-                </div>
+    <button id="scrollToTopBtn"
+        class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg transition duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5"></path>
+            <path d="m5 12 7-7 7 7"></path>
+        </svg>
+    </button>
 
-                <div class="detail-section">
-                    <h2>Interface de Blog</h2>
-                    <div class="project-detail-image">
-                        <img src="/placeholder.svg?height=500&width=800" alt="Interface blog">
-                    </div>
-                </div>
+    <script>
+        const scrollBtn = document.getElementById("scrollToTopBtn");
 
-                <div class="detail-section">
-                    <h2>Fonctionnalités</h2>
-                    <ul class="feature-list">
-                        <li>Éditeur Markdown avec prévisualisation en temps réel</li>
-                        <li>Gestion des médias et images optimisées</li>
-                        <li>Système de commentaires avec modération</li>
-                        <li>Catégories et tags pour l'organisation</li>
-                        <li>SEO optimisé avec métadonnées personnalisables</li>
-                        <li>Interface d'administration complète</li>
-                    </ul>
-                </div>
+        // Fonction de défilement doux vers le haut
+        const scrollToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
 
-                <div class="detail-section">
-                    <h2>Éditeur d'Articles</h2>
-                    <div class="project-detail-image">
-                        <img src="/placeholder.svg?height=500&width=800" alt="Éditeur">
-                    </div>
-                </div>
+        // Écouteur d'événement pour le clic
+        scrollBtn.addEventListener('click', scrollToTop);
 
-                <div class="detail-section">
-                    <h2>Technologies Utilisées</h2>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <strong>Framework:</strong> Next.js 14
-                        </div>
-                        <div class="tech-item">
-                            <strong>ORM:</strong> Prisma
-                        </div>
-                        <div class="tech-item">
-                            <strong>Base de données:</strong> MySQL
-                        </div>
-                        <div class="tech-item">
-                            <strong>Styling:</strong> Tailwind CSS
-                        </div>
-                    </div>
-                </div>
+        // Affiche/masque le bouton basé sur la position de défilement
+        const toggleScrollButton = () => {
+            // Afficher le bouton si le défilement dépasse 20px
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
 
-                <div class="detail-section">
-                    <h2>Liens du Projet</h2>
-                    <div class="project-detail-links">
-                        <a href="#" class="btn btn-primary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            Voir le Code
-                        </a>
-                        <a href="#" class="btn btn-secondary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Voir la Démo
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        // Événement de défilement
+        window.onscroll = toggleScrollButton;
 
-    <script src="script.js"></script>
+        // Cacher le bouton au chargement initial
+        // Note: Vous pouvez commenter cette ligne si vous souhaitez que le bouton soit visible dès le début, même en haut de page.
+        toggleScrollButton(); 
+    </script>
 </body>
+
 </html>
