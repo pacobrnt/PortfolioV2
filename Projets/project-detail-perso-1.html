@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site E-commerce Moderne - Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">À Propos</a></li>
+                <li><a href="projects.html" class="nav-link active">Projets</a></li>
+                <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail Header -->
+    <section class="page-header">
+        <div class="container">
+            <a href="projects.html" class="back-link">← Retour aux projets</a>
+            <h1 class="page-title">Site E-commerce Moderne</h1>
+            <p class="page-description">Projet Personnel</p>
+        </div>
+    </section>
+
+    <!-- Project Detail Content -->
+    <section class="project-detail-section">
+        <div class="container">
+            <div class="project-detail-content">
+                <!-- Project Overview -->
+                <div class="detail-section">
+                    <h2>Aperçu du Projet</h2>
+                    <p>
+                        Ce projet est une plateforme e-commerce complète développée avec les technologies modernes. 
+                        Elle permet aux utilisateurs de parcourir des produits, de les ajouter au panier, et de finaliser 
+                        leurs achats de manière sécurisée.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Stripe</span>
+                    </div>
+                </div>
+
+                <!-- Project Image 1 -->
+                <div class="detail-section">
+                    <h2>Interface Principale</h2>
+                    <div class="project-detail-image">
+                        <img src="/placeholder.svg?height=500&width=800" alt="Interface principale">
+                    </div>
+                </div>
+
+                <!-- Project Description -->
+                <div class="detail-section">
+                    <h2>Description Détaillée</h2>
+                    <p>
+                        L'application offre une expérience utilisateur fluide avec une interface moderne et intuitive. 
+                        Les principales fonctionnalités incluent :
+                    </p>
+                    <ul class="feature-list">
+                        <li>Catalogue de produits avec filtres et recherche avancée</li>
+                        <li>Système de panier dynamique avec calcul en temps réel</li>
+                        <li>Intégration de paiement sécurisé via Stripe</li>
+                        <li>Gestion des commandes et historique d'achats</li>
+                        <li>Interface d'administration pour la gestion des produits</li>
+                        <li>Système d'authentification et de profils utilisateurs</li>
+                    </ul>
+                </div>
+
+                <!-- Project Image 2 -->
+                <div class="detail-section">
+                    <h2>Processus de Paiement</h2>
+                    <div class="project-detail-image">
+                        <img src="/placeholder.svg?height=500&width=800" alt="Processus de paiement">
+                    </div>
+                </div>
+
+                <!-- Technologies Used -->
+                <div class="detail-section">
+                    <h2>Technologies Utilisées</h2>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <strong>Frontend:</strong> React, Redux, Tailwind CSS
+                        </div>
+                        <div class="tech-item">
+                            <strong>Backend:</strong> Node.js, Express
+                        </div>
+                        <div class="tech-item">
+                            <strong>Base de données:</strong> MongoDB
+                        </div>
+                        <div class="tech-item">
+                            <strong>Paiement:</strong> Stripe API
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Links -->
+                <div class="detail-section">
+                    <h2>Liens du Projet</h2>
+                    <div class="project-detail-links">
+                        <a href="#" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            Voir le Code
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Voir la Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

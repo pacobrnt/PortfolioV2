@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">À Propos</a></li>
+                <li><a href="projects.html" class="nav-link">Projets</a></li>
+                <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Bonjour, je suis <span class="text-accent">Paco Hybord</span></h1>
+                <p class="hero-subtitle">Étudiant en 2e année de BTS SIO SLAM</p>
+                <p class="hero-description">
+                    Brevet de Technicien Supérieur Services Informatiques aux Organisations, option Solutions Logicielles
+                    et Applications Métiers.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">Voir mes projets</a>
+                    <a href="contact.html" class="btn btn-secondary">Me contacter</a>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <section class="info-card-section">
+    <div class="container">
+        <div class="info-card">
+            <div class="info-card-text">
+                <h2>Passionné par le Développement</h2>
+                <p>
+                    Je m'appelle <strong>Paco Hybord</strong>, passionné par l'informatique et en constante
+                    recherche de
+                    progression technique.
+                    J’ai acquis des bases solides en développement web et une première expérience avec plusieurs
+                    technologies du domaine.
+                </p>
+                <p>
+                    Curieux et rigoureux, j’ai également découvert la cybersécurité et l’univers des bases de
+                    données,
+                    ce qui renforce ma polyvalence
+                    dans le monde du développement informatique.
+                </p>
+            </div>
+            <div class="info-card-image">
+                <img src="Img/photoProfil.JPG" alt="Développeur au travail">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- PDF buttons section moved below info card -->
+    <section class="pdf-section">
+        <div class="container">
+            <div class="pdf-buttons-centered">
+                <a href="Img/CV.Final (1).pdf" class="btn btn-pdf" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="12" y1="18" x2="12" y2="12"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    Mon CV
+                </a>
+                <a href="documents/tableau-competences.pdf" class="btn btn-pdf" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="12" y1="18" x2="12" y2="12"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    Tableau de Compétences
+                </a>
+                <a href="documents/veille-informationnelle.pdf" class="btn btn-pdf" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="12" y1="18" x2="12" y2="12"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    Veille Informationnelle
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">À Propos de Moi</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">💼</div>
+                    <h3>Expérience</h3>
+                    <p>2 Stages en entreprise en tant que développeur web</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🎓</div>
+                    <h3>Formation</h3>
+                    <p>Actuellement en bts SIO</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🚀</div>
+                    <h3>Projets</h3>
+                    <p>10+ projets réalisés</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Mon Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>BTS SIO – Lycée Gabriel Fauré, Annecy</h3>
+                        <p class="timeline-date">2024 – 2026</p>
+                        <p>Spécialisation en Solutions Logicielles et Applications Métiers (SLAM).
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>BAC STMG – Lycée de la Versoie, Thonon Les Bains</h3>
+                        <p class="timeline-date">2021 – 2024</p>
+                        <p>Spécialiser en Gestion Finance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
