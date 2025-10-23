@@ -1,117 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Météo - Mon Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyWeatherSport</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Portfolio</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">À Propos</a></li>
-                <li><a href="projects.html" class="nav-link active">Projets</a></li>
-                <li><a href="skills.html" class="nav-link">Compétences</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <section class="page-header">
-        <div class="container">
-            <a href="projects.html" class="back-link">← Retour aux projets</a>
-            <h1 class="page-title">Application Météo</h1>
-            <p class="page-description">Projet Scolaire</p>
-        </div>
-    </section>
+<body class="bg-black text-white px-10 md:px-32 py-16 font-sans">
 
-    <section class="project-detail-section">
-        <div class="container">
-            <div class="project-detail-content">
-                <div class="detail-section">
-                    <h2>Aperçu du Projet</h2>
-                    <p>
-                        Application météo mobile avec prévisions détaillées, cartes interactives et alertes personnalisées.
-                        Développée avec React Native pour iOS et Android.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">React Native</span>
-                        <span class="tag">API REST</span>
-                        <span class="tag">Maps</span>
-                    </div>
+    <a href="../projects.html" style="display:inline-block; padding:20px; color:white;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"></path>
+            <path d="M19 12H5"></path>
+        </svg>
+    </a>
+    <section class="max-w-3xl mx-auto py-16 px-4">
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">MyWeatherSport (Application Android)</h1>
+
+        <p class="text-lg text-gray-400 mb-8">
+            Projet de développement mobile : Consultation météo et recommandation sportive personnalisée.
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+            Développée sur **Android Studio**, l'application MyWeatherSport a été conçue pour offrir à l'utilisateur
+            la météo actuelle d'une ville et, surtout, lui recommander des activités sportives adaptées aux conditions.
+            L'objectif principal était d'appliquer les principes du développement mobile Android en Java, en intégrant
+            une architecture propre et la consommation d'une API externe. **Nous avons également mis en place une page de prévisions détaillée sur 5 jours.**
+        </p>
+
+        <hr class="border-gray-700 my-10" />
+
+
+        <h2 class="text-2xl font-semibold mb-4">Architecture et Développement</h2>
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            Le projet a été structuré autour de l'architecture **Model-View-ViewModel (MVVM)**, une approche
+            recommandée pour la construction d'applications Android robustes et maintenables.
+            L'interface utilisateur est gérée par des **Fragments** (`HomeFragment` pour la météo actuelle et le sport, `ForecastFragment` pour les prévisions).
+            Ce modèle permet d'assurer une bonne séparation des préoccupations (SoC).
+        </p>
+
+        <h3 class="text-xl font-semibold mt-6 mb-4">Intégration de l'API Météo</h3>
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            L'application utilise l'API **OpenWeatherMap** pour récupérer les données météorologiques.
+            L'implémentation réseau a été réalisée avec la librairie **Retrofit** :
+            un service (`OpenWeatherService`) définit les requêtes HTTP GET pour la météo actuelle et les prévisions sur
+            5 jours.
+            Le `WeatherRepository` se charge ensuite de faire l'appel à l'API et de mettre à jour les `LiveData`
+            observables dans le `WeatherViewModel`.
+        </p>
+
+        <h3 class="text-xl font-semibold mt-6 mb-4">Fonctionnalité de Prévisions Détaillées (Forecast)</h3>
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            La page de prévisions est gérée par le `ForecastFragment`. Ce fragment utilise un `RecyclerView` (`rvForecast`) pour afficher une liste des prévisions horaires sur 5 jours, récupérées via la méthode `getForecast` du Repository. L'`ForecastAdapter` est responsable de la mise en forme de chaque élément de la liste, affichant l'icône, le jour, l'heure et la température. Le ViewModel est partagé avec le `HomeFragment` pour que la recherche d'une ville (`currentCity`) soit conservée et utilisée pour charger les prévisions.
+        </p>
+        
+        <h3 class="text-xl font-semibold mt-6 mb-4">Logique de Recommandation Sportive</h3>
+        <p class="text-lg leading-relaxed text-gray-300 mb-4 text-justify">
+            La fonctionnalité clé est la recommandation sportive, implémentée dans la méthode `recommendSports` du
+            `WeatherViewModel`.
+            Celle-ci analyse la condition météo (`Rain`, `Snow`, `Clear`, `Clouds`), la température et la vitesse du
+            vent pour proposer le meilleur sport :
+        </p>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 mb-10">
+            <li>Si **Pluie** (`Rain`) : Boxe, Ping-pong (sports en salle).</li>
+            <li>Si **Neige** (`Snow`) : Ski.</li>
+            <li>Si **Vent fort** ($\ge 8$ m/s) : Voile, Kitesurf (sports de vent).</li>
+            <li>Si **Chaud** ($\ge 25^\circ C$) : Natation, Running (sports d'été).</li>
+            <li>Si **Doux** ($\ge 15^\circ C$) : Football, Tennis (sports d'extérieur classiques).</li>
+            <li>Sinon (froid ou autre) : Musculation (sport d'intérieur par défaut).</li>
+        </ul>
+        <p class="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+            Les illustrations pour chaque sport (comme le football, le tennis, ou la natation) ont été générées par une
+            intelligence artificielle, offrant un contenu visuel de haute qualité pour l'utilisateur.
+        </p>
+
+        <hr class="border-gray-700 my-10" />
+
+        <h2 class="text-2xl font-semibold mb-6">Aperçus du Projet</h2>
+        <div class="flex flex-col sm:flex-row gap-4 mb-10 justify-center">
+            <div class="flex flex-col items-center max-w-xs mx-auto sm:w-1/3 sm:max-w-none">
+                <div class="w-56 h-112 overflow-hidden border border-gray-700 rounded-lg">
+                    <img src="../Img/s.png" alt="Aperçu écran de saisie de la ville"
+                        class="w-full h-full object-cover" />
                 </div>
-
-                <div class="detail-section">
-                    <h2>Interface Principale</h2>
-                    <div class="project-detail-image">
-                        <img src="/placeholder.svg?height=500&width=800" alt="Interface météo">
-                    </div>
-                </div>
-
-                <div class="detail-section">
-                    <h2>Fonctionnalités</h2>
-                    <ul class="feature-list">
-                        <li>Prévisions météo détaillées sur 7 jours</li>
-                        <li>Cartes interactives avec radar de précipitations</li>
-                        <li>Alertes météo personnalisées</li>
-                        <li>Géolocalisation automatique</li>
-                        <li>Favoris et gestion de plusieurs villes</li>
-                        <li>Widgets pour écran d'accueil</li>
-                    </ul>
-                </div>
-
-                <div class="detail-section">
-                    <h2>Carte Interactive</h2>
-                    <div class="project-detail-image">
-                        <img src="/placeholder.svg?height=500&width=800" alt="Carte météo">
-                    </div>
-                </div>
-
-                <div class="detail-section">
-                    <h2>Technologies Utilisées</h2>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <strong>Framework:</strong> React Native
-                        </div>
-                        <div class="tech-item">
-                            <strong>API:</strong> OpenWeatherMap API
-                        </div>
-                        <div class="tech-item">
-                            <strong>Maps:</strong> React Native Maps
-                        </div>
-                        <div class="tech-item">
-                            <strong>State:</strong> Redux Toolkit
-                        </div>
-                    </div>
-                </div>
-
-                <div class="detail-section">
-                    <h2>Liens du Projet</h2>
-                    <div class="project-detail-links">
-                        <a href="#" class="btn btn-primary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            Voir le Code
-                        </a>
-                        <a href="#" class="btn btn-secondary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Voir la Démo
-                        </a>
-                    </div>
-                </div>
+                <button class="mt-4 px-6 py-2 w-56 bg-gray-700 text-white font-semibold rounded-lg opacity-50 ">Saisie</button>
             </div>
+            <div class="flex flex-col items-center max-w-xs mx-auto sm:w-1/3 sm:max-w-none">
+                <div class="w-56 h-112 overflow-hidden border border-gray-700 rounded-lg">
+                    <img src="../Img/t.png" alt="Aperçu écran du résultat météo"
+                        class="w-full h-full object-cover" />
+                </div>
+                <button class="mt-4 px-6 py-2 w-56 bg-gray-700 text-white font-semibold rounded-lg opacity-50 ">Résultat</button>
+            </div>
+            <div class="flex flex-col items-center max-w-xs mx-auto sm:w-1/3 sm:max-w-none">
+                <div class="w-56 h-112 overflow-hidden border border-gray-700 rounded-lg">
+                    <img src="../Img/p.png" alt="Aperçu écran des prévisions 5 jours"
+                        class="w-full h-full object-cover" />
+                </div>
+                <button class="mt-4 px-6 py-2 w-56 bg-gray-700 text-white font-semibold rounded-lg opacity-50 ">Prévisions</button>
+            </div>
+        </div>
+
+        <hr class="border-gray-700 my-10" />
+
+        <div class="flex flex-wrap gap-4 mt-8">
+            <a href="https://github.com/pacobrnt/MyWeatherSport" target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                Voir le Code
+            </a>
+            <a href="#" target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg border border-gray-600 hover:bg-gray-800 transition duration-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Voir la Démo
+            </a>
         </div>
     </section>
 
@@ -152,10 +169,8 @@
         window.onscroll = toggleScrollButton;
 
         // Cacher le bouton au chargement initial
-        // Note: Vous pouvez commenter cette ligne si vous souhaitez que le bouton soit visible dès le début, même en haut de page.
-        toggleScrollButton(); 
+        toggleScrollButton();
     </script>
-
-    <script src="script.js"></script>
 </body>
+
 </html>
