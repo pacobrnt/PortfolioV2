@@ -49,20 +49,8 @@ body {
   margin: 0 auto;
   padding: 1rem 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-.nav-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.nav-logo:hover {
-  color: var(--color-accent);
 }
 
 .nav-menu {
